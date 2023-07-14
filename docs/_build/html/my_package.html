@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my_package package &mdash; tamlep_assignment_3.2.2  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="my_package" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            tamlep_assignment_3.2.2
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">my_package</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">my_package package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-my_package.ingest">my_package.ingest module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.ingest.feature_engineering"><code class="docutils literal notranslate"><span class="pre">feature_engineering()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.ingest.fetch_housing_data"><code class="docutils literal notranslate"><span class="pre">fetch_housing_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.ingest.load_housing_data"><code class="docutils literal notranslate"><span class="pre">load_housing_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.ingest.train_test_split"><code class="docutils literal notranslate"><span class="pre">train_test_split()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-my_package.score">my_package.score module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.check_if_file_exists"><code class="docutils literal notranslate"><span class="pre">check_if_file_exists()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.get_feature_importance"><code class="docutils literal notranslate"><span class="pre">get_feature_importance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.get_rmse"><code class="docutils literal notranslate"><span class="pre">get_rmse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.load_model"><code class="docutils literal notranslate"><span class="pre">load_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.load_processed_data"><code class="docutils literal notranslate"><span class="pre">load_processed_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.model_load"><code class="docutils literal notranslate"><span class="pre">model_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.score_model"><code class="docutils literal notranslate"><span class="pre">score_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.score.separator"><code class="docutils literal notranslate"><span class="pre">separator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-my_package.train">my_package.train module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.train.load_processed_data"><code class="docutils literal notranslate"><span class="pre">load_processed_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.train.model_dump"><code class="docutils literal notranslate"><span class="pre">model_dump()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.train.train_decision_tree"><code class="docutils literal notranslate"><span class="pre">train_decision_tree()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.train.train_linear_regression"><code class="docutils literal notranslate"><span class="pre">train_linear_regression()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.train.train_random_forest_GridSearch"><code class="docutils literal notranslate"><span class="pre">train_random_forest_GridSearch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_package.train.train_random_forest_RandomSearch"><code class="docutils literal notranslate"><span class="pre">train_random_forest_RandomSearch()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-my_package">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tamlep_assignment_3.2.2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">my_package</a></li>
+      <li class="breadcrumb-item active">my_package package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/my_package.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="my-package-package">
+<h1>my_package package<a class="headerlink" href="#my-package-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-my_package.ingest">
+<span id="my-package-ingest-module"></span><h2>my_package.ingest module<a class="headerlink" href="#module-my_package.ingest" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.ingest.feature_engineering">
+<span class="sig-prename descclassname"><span class="pre">my_package.ingest.</span></span><span class="sig-name descname"><span class="pre">feature_engineering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">XTRAIN_FILEPATH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">YTRAIN_FILEPATH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">XTEST_FILEPATH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">YTEST_FILEPATH</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.ingest.feature_engineering" title="Permalink to this definition"></a></dt>
+<dd><p>Saves the feature engineered train and test data.</p>
+<p>This function performs the feature engineering for housing data and
+saves the final train and test data at specified path.</p>
+<dl>
+<dt>Args:</dt><dd><p>train_set : housing train dataframe</p>
+<p>test_set : housing test dataframe</p>
+<p>XTRAIN_FILEPATH : path to save X_train</p>
+<p>YTRAIN_FILEPATH : path to save y_train</p>
+<p>XTEST_FILEPATH : path to save X_test</p>
+<p>YTEST_FILEPATH : path to save y_test</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.ingest.fetch_housing_data">
+<span class="sig-prename descclassname"><span class="pre">my_package.ingest.</span></span><span class="sig-name descname"><span class="pre">fetch_housing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">housing_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">housing_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.ingest.fetch_housing_data" title="Permalink to this definition"></a></dt>
+<dd><p>This function downloads the housing data for this project.</p>
+<p>If the URL is incorrect or file not found at the mentioned URL then this function exits.</p>
+<dl>
+<dt>Args:</dt><dd><p>housing_url: housing data will we downloded using this ‘url’.</p>
+<p>housing_path: Downloaded housing data will be saved at this path.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.ingest.load_housing_data">
+<span class="sig-prename descclassname"><span class="pre">my_package.ingest.</span></span><span class="sig-name descname"><span class="pre">load_housing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">housing_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.ingest.load_housing_data" title="Permalink to this definition"></a></dt>
+<dd><p>This function loads and returns the housing data.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>housing_path : path where the housing data was saved.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Data as pandas dataframe loaded from housing_path.</p>
+</dd>
+<dt>Raises:</dt><dd><p>Exit the code if housing_path does not exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.ingest.train_test_split">
+<span class="sig-prename descclassname"><span class="pre">my_package.ingest.</span></span><span class="sig-name descname"><span class="pre">train_test_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.ingest.train_test_split" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns the train and test data using StratifiedShuffleSplit method.</p>
+<dl>
+<dt>Args:</dt><dd><p>df: pandas dataframe</p>
+<p>test_size: value between 0 and 1 that represents the percentage of data as test data. Default values is 0.2</p>
+<p>random_state: any number as seed for the purpose of reproducibility.</p>
+</dd>
+<dt>Returns:</dt><dd><p>train_set,test_set</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-my_package.score">
+<span id="my-package-score-module"></span><h2>my_package.score module<a class="headerlink" href="#module-my_package.score" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.check_if_file_exists">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">check_if_file_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.check_if_file_exists" title="Permalink to this definition"></a></dt>
+<dd><p>This function checks if a file exists.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>f: filepath that is needed to be checked.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+<dt>Raises:</dt><dd><p>Exits if file does not exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.get_feature_importance">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">get_feature_importance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trained_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_NAME</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_columns_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.get_feature_importance" title="Permalink to this definition"></a></dt>
+<dd><p>This function saves the feature importance of a model.</p>
+<dl>
+<dt>Args:</dt><dd><p>trained_model: trained model object.</p>
+<p>MODEL_NAME: model name for the purpose of logs.</p>
+<p>train_columns_list: list of features/columns on which model was trained.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.get_rmse">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">get_rmse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.get_rmse" title="Permalink to this definition"></a></dt>
+<dd><p>This function computes the ‘root mean square error(RMSE)’.</p>
+<dl>
+<dt>Args:</dt><dd><p>y_true: Series or numpy array(1D) of actual values.</p>
+<p>y_pred: Series or numpy array(1D) of predicted values.</p>
+</dd>
+<dt>Returns:</dt><dd><p>RMSE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.load_model">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MODEL_DIR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_NAME</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.load_model" title="Permalink to this definition"></a></dt>
+<dd><p>This function loads a trained model that was saved as pickle object.</p>
+<dl>
+<dt>Args:</dt><dd><p>MODEL_DIR: Directory where model object is present.</p>
+<p>MODEL_NAME: Name of the model pickle file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>model : loaded model</p>
+</dd>
+<dt>Raises:</dt><dd><p>Exists the code if model does not exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.load_processed_data">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">load_processed_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PROCESSED_DATA_PATH</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.load_processed_data" title="Permalink to this definition"></a></dt>
+<dd><p>This function loads the preprocessed data.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>INPUT_DIR: Path of the directory there preprocessed data resides.</p>
+</dd>
+<dt>Returns:</dt><dd><p>X_train, y_train, X_test and y_test</p>
+</dd>
+<dt>Raises:</dt><dd><p>Exits if Processed data is not present.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.model_load">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">model_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.model_load" title="Permalink to this definition"></a></dt>
+<dd><p>This function loads the trained model.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filepath: path to load the model.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.score_model">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">score_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trained_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_NAME</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.score_model" title="Permalink to this definition"></a></dt>
+<dd><p>This function scores the model using RMSE as performance matric.</p>
+<dl>
+<dt>Args:</dt><dd><p>trained_model: trained model object.</p>
+<p>MODEL_NAME: model name for the purpose of logs.</p>
+<p>X_train: Pandas Dataframe or Numpy Array that have features using which model was trained.</p>
+<p>y_train: Pandas Dataframe or numpy array that have train-target values.</p>
+<p>X_test: Pandas Dataframe or Numpy Array that have features using which model will predict.</p>
+<p>y_test: Pandas Dataframe or numpy array that have test-target values.</p>
+</dd>
+<dt>Returns:</dt><dd><p>RMSE on train and test data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.score.separator">
+<span class="sig-prename descclassname"><span class="pre">my_package.score.</span></span><span class="sig-name descname"><span class="pre">separator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_package.score.separator" title="Permalink to this definition"></a></dt>
+<dd><p>This function puts a separator of 50 “=” symbols</p>
+</dd></dl>
+
+</section>
+<section id="module-my_package.train">
+<span id="my-package-train-module"></span><h2>my_package.train module<a class="headerlink" href="#module-my_package.train" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.train.load_processed_data">
+<span class="sig-prename descclassname"><span class="pre">my_package.train.</span></span><span class="sig-name descname"><span class="pre">load_processed_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PROCESSED_DATA_PATH</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.train.load_processed_data" title="Permalink to this definition"></a></dt>
+<dd><p>This function loads the preprocessed data.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>INPUT_DIR: Path of the directory there preprocessed data resides.</p>
+</dd>
+<dt>Returns:</dt><dd><p>X_train, y_train, X_test and y_test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.train.model_dump">
+<span class="sig-prename descclassname"><span class="pre">my_package.train.</span></span><span class="sig-name descname"><span class="pre">model_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.train.model_dump" title="Permalink to this definition"></a></dt>
+<dd><p>This function dumps the trained model.</p>
+<dl>
+<dt>Args:</dt><dd><p>model: trained models.</p>
+<p>filepath: path to save/dump the model.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.train.train_decision_tree">
+<span class="sig-prename descclassname"><span class="pre">my_package.train.</span></span><span class="sig-name descname"><span class="pre">train_decision_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_DIR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_NAME</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.train.train_decision_tree" title="Permalink to this definition"></a></dt>
+<dd><p>This function trains the Decision Tree Model.</p>
+<dl>
+<dt>Args:</dt><dd><p>X_train: Pandas Dataframe or Numpy Array that have features to train the model.</p>
+<p>y_train: Pandas Dataframe or numpy array that have target values.</p>
+<p>MODEL_DIR: Absolute or relative path of directory where the model will be saved.</p>
+<p>MODEL_NAME: Name of model that will be save as pickle file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.train.train_linear_regression">
+<span class="sig-prename descclassname"><span class="pre">my_package.train.</span></span><span class="sig-name descname"><span class="pre">train_linear_regression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_DIR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_NAME</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.train.train_linear_regression" title="Permalink to this definition"></a></dt>
+<dd><p>This function trains the Linear Regression Model.</p>
+<dl>
+<dt>Args:</dt><dd><p>X_train: Pandas Dataframe or Numpy Array that have features to train the model.</p>
+<p>y_train: Pandas Dataframe or numpy array that have target values.</p>
+<p>MODEL_DIR: Absolute or relative path of directory where the model will be saved.</p>
+<p>MODEL_NAME: Name of model that will be save as pickle file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.train.train_random_forest_GridSearch">
+<span class="sig-prename descclassname"><span class="pre">my_package.train.</span></span><span class="sig-name descname"><span class="pre">train_random_forest_GridSearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_DIR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_NAME</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.train.train_random_forest_GridSearch" title="Permalink to this definition"></a></dt>
+<dd><p>This function trains the Random Forest Model.</p>
+<p>GridSearchCV method is used to find the best hyperparameters while training.</p>
+<dl>
+<dt>Args:</dt><dd><p>X_train: Pandas Dataframe or Numpy Array that have features to train the model.</p>
+<p>y_train: Pandas Dataframe or numpy array that have target values.</p>
+<p>param_grid: list of dictionaries that contains the parameters for hypertuning.</p>
+<p>cv: number of cross-validation folds.</p>
+<p>MODEL_DIR: Absolute or relative path of directory where the model will be saved.</p>
+<p>MODEL_NAME: Name of model that will be save as pickle file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_package.train.train_random_forest_RandomSearch">
+<span class="sig-prename descclassname"><span class="pre">my_package.train.</span></span><span class="sig-name descname"><span class="pre">train_random_forest_RandomSearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_distribs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_iter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_DIR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL_NAME</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.train.train_random_forest_RandomSearch" title="Permalink to this definition"></a></dt>
+<dd><p>This function trains the Random Forest Model.</p>
+<p>RandomSearchCV method is used to find the best hyperparameters while training.</p>
+<dl>
+<dt>Args:</dt><dd><p>X_train: Pandas Dataframe or Numpy Array that have features to train the model.</p>
+<p>y_train: Pandas Dataframe or numpy array that have target values.</p>
+<p>param_distribs: dictionary that contains the parameters for hypertuning.</p>
+<p>n_iter: number of iterations that RandomSearchCV will used to find best estimator.</p>
+<p>cv: number of cross-validation folds.</p>
+<p>MODEL_DIR: Absolute or relative path of directory where the model will be saved.</p>
+<p>MODEL_NAME: Name of model that will be save as pickle file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-my_package">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-my_package" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="my_package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Prashant Anuragi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
