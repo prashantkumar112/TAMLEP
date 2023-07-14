@@ -1,0 +1,6 @@
+{
+  "raw_data_dir": "../../data/raw",
+  "processed_data_dir": "../../data/processed",
+  "model_dir": "../../artifacts",
+  "log_dir": "../../logs"
+}
