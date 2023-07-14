@@ -1,5 +1,0 @@
-email : prashant.anuragi@tigeranalytics.com
-user : prashantanuragi
-password: Prashant@Tigergit
-
-token(tamlep) : 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
