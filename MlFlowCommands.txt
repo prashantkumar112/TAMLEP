@@ -1,0 +1,22 @@
+Running Mlflow Server
+==============================
+mlflow server --backend-store-uri mlruns/ --default-artifact-root mlruns/ --host 0.0.0.0 --port 5000
+
+
+Deploying a mlflow model for prediction
+=========================================
+mlflow models serve -m mlruns/<experiment_id>/<run_id>/artifacts/model/ -h 0.0.0.0 -p 1234
+e.g
+mlflow models serve -m mlruns/537764386285815796/32d61ffb33f6452e9750b3a762a3213d/artifacts/model/ -h 0.0.0.0 -p 1234
+
+
+Prediction Using Mlflow Server
+==================================
+curl -X POST -H "Content-Type:application/json" --data '{"dataframe_split": {"columns":["fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides", "free sulfur dioxide", "total sulfur dioxide", "density", "pH", "sulphates", "alcohol"],"data":[[12.8, 0.029, 0.48, 0.98, 6.2, 29, 3.33, 1.2, 0.39, 75, 0.66]]}}' http://127.0.0.1:1234/invocations
+
+
+Important Link
+===============
+https://mlflow.org/docs/latest/tutorials-and-examples/tutorial.html
+
+(Search "json" to see how to predict using mlflow-serve)

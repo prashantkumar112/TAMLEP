@@ -1,0 +1,48 @@
+
+1. Install Sphinx
+	pip install Sphinx
+2. Create a 'docs' directory in project directory.
+3. Go to 'docs' directory
+4. Run below command
+	sphinx-quickstart
+There will be few questions answer them : keep everything as default except 'Project Name' and 'Author'
+
+5. Install sphinx_rtd_theme
+	pip install sphinx_rtd_theme
+
+6. Open conf.py file which was created automatically after running above command.
+6.1 Add below lines at the start of the file.
+	import os
+	import sys
+	sys.path.insert(0, os.path.abspath("../src/"))
+
+	Note : "../src/" is the path for the directory where your modules(directories/folders where .py files resides) are present. Change it as per your directory structure.
+
+6.2 find 'extensions' line in conf.py and replace it with below line if "extensions=[]"
+	extensions = ["sphinx.ext.autodoc"]
+
+6.3 change html_theme = "alabaster" to html_theme = "sphinx_rtd_theme"
+6.4 Save and close the file.
+
+7. Open 'index.rst' file and add modules lines if not already present and save the file.
+
+	.. toctree::
+   	   :maxdepth: 2
+           :caption: Contents:
+
+        modules
+
+8. sphinx-apidoc -o . ../src/my_package
+	Note: my_package is the directory where .py are present.
+
+9. Open "my_package.rst" file
+	Remove the module that you don't want to document. Example : A python script that is running all other python scripts.
+
+10. Run Below command
+	make html
+
+11. Done....your documnets have been created in "_build/html" directory. Open 'index.html'
+
+Note : If you see any warning or error when running 'make html' command please resolve them by writing your 'docstrings' properly and run 'make_html' command again.
+
+

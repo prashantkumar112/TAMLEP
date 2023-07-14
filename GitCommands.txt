@@ -1,0 +1,41 @@
+Starting With New Project
+=============================
+1. Assuming ssh-key is generated and added to git account
+2. Go to directory where you want to work in
+3. $git init (Only one time to initialize it as a git repository after that always start from step 4)
+4. $eval "$(ssh-agent -s)"
+5. $ssh-add ~/tigergit_ssh (This the the ssh-key generated on linux/windown system and added to git account)
+6. $ssh -T git@github.com (This will verify your identity)
+	output : You are logged in as "your_username or mail id"
+7. $git remote add origin <repo_name> (assuming git repo is already created in git account with empty Readme.md file)
+	example : git remote add origin git@github.com:prashantanuragi/mle-training_mlflow.git
+8. $ git pull origin main
+	This will show Readme.md file 
+
+Additional Commands
+======================
+1. $git branch
+	To see on which branch you are currently working
+2. $git fetch --all
+	Fetch all the branch/tag names in git metadata locally
+3. $git checkput <branch_name>
+	To change branch
+4. $git add .
+	To add all the files in current directory for tracking so that git knows what modifications were done
+5. $git commit -m <unique_commit_message>
+	To commit all the modifications
+6. $git push -u origin <current_branch>
+	To push all the changes to remote branch
+7. $git tag -a v0.1 -m 'v0.1'
+	to create a tag
+8. $git push -u origin <tag_name>
+	To push changes to remote tag branch
+9. $git checkout -b <new_branchname> <tag_name>
+	To create a new branch from a tag
+10.$git config user.email <mail_id>
+	add email at user level
+11.$git config user.name <User Name>
+	add username at user level 
+
+
+
