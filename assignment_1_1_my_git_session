@@ -1,0 +1,222 @@
+Script started on 2023-05-26 23:33:30+05:30 [TERM="xterm-256color" TTY="/dev/tty1" COLUMNS="83" LINES="44"]
+[?2004h]0;prashantanuragi@TIGER01106: ~[01;32mprashantanuragi@TIGER01106[00m:[01;34m~[00m$ git config --list --show-origin 
+[?2004l[?1h=[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~[01;32mprashantanuragi@TIGER01106[00m:[01;34m~[00m$ git config --global username[K[K[K[K.name ""p"r"a"s"h"a"n"t"a"n"u"r"a"g"i"[C
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~[01;32mprashantanuragi@TIGER01106[00m:[01;34m~[00m$ git config --global user.email prashant.anuragi@tiger analytics.com
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~[01;32mprashantanuragi@TIGER01106[00m:[01;34m~[00m$ git config --list
+[?2004l[?1h=user.name=prashantanuragi[m
+user.email=prashant.anuragi@tigeranalytics.com[m
+[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~[01;32mprashantanuragi@TIGER01106[00m:[01;34m~[00m$ git add -h
+[?2004lusage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+[?2004h]0;prashantanuragi@TIGER01106: ~[01;32mprashantanuragi@TIGER01106[00m:[01;34m~[00m$ mkdit[Kr my_git_project[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktamlep_gitproject
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~[01;32mprashantanuragi@TIGER01106[00m:[01;34m~[00m$ cd tamlep_gitproject/
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git init 
+[?2004l[33mhint: Using 'master' as the name for the initial branch. This default branch name[m
+[33mhint: is subject to change. To configure the initial branch name to use in all[m
+[33mhint: of your new repositories, which will suppress this warning, call:[m
+[33mhint: [m
+[33mhint: 	git config --global init.defaultBranch <name>[m
+[33mhint: [m
+[33mhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and[m
+[33mhint: 'development'. The just-created branch can be renamed via this command:[m
+[33mhint: [m
+[33mhint: 	git branch -m <name>[m
+Initialized empty Git repository in /home/prashantanuragi/tamlep_gitproject/.git/
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ touch test.py
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git add test.py 
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git commit -m ''i'n'i't'i'a'l' 'p'r'o'j'e'c't' 'v'e'r' [A]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs'i'i'o'[1P'[1P'o'n'[C
+[?2004l[master (root-commit) 882487b] initial project version
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.py
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git status 
+[?2004lOn branch master
+nothing to commit, working tree clean
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ echo ''m'y' 'p'r'o'j'e'c't'[C > REAF[KDME
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git status 
+[?2004lOn branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mREADME[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git add README 
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git add README [4Pstatus[C
+[?2004lOn branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   README[m
+
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git diff
+[?2004l[?1h=[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git commit 
+[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;44r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[42;35H(B[0;7m[ Reading... ](B[m[42;34H(B[0;7m[ Read 8 lines ](B[m[H(B[0;7m        /home/prashantanuragi/tamlep_gitproject/.git/COMMIT_EDITMSG                [1;82H(B[m[43d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[44d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch master[7d# Changes to be committed:[8d#[38;5;208m       [36mnew file:   README[9d#[2d[39m(B[m[?12l[?25h[?25l[42d[J[44d[?12l[?25h[44;1H[?1049l[23;0;0t[?1l>[?2004l[KAborting commit due to empty commit message.
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git commit [3Pdiffstatus [4@add README[C[4Pstatus[Cecho 'my project' > README[15Pgit status commit -m 'initial project version'1'[C
+[?2004l[master 12df53a] initial project version1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git log
+[?2004l[?1h=[33mcommit 12df53af3ec600210a778ea5057c406b1cd6c022[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: prashantanuragi <prashant.anuragi@tigeranalytics.com>[m
+Date:   Fri May 26 23:49:11 2023 +0530[m
+[m
+    initial project version1[m
+[m
+[33mcommit 882487b630938dafbb710cfce5f7d8cd9b68fd5b[m[m
+Author: prashantanuragi <prashant.anuragi@tigeranalytics.com>[m
+Date:   Fri May 26 23:45:09 2023 +0530[m
+[m
+    initial project version[m
+[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git log -p 2
+[?2004lfatal: ambiguous argument '2': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git log -p 2-2
+[?2004l[?1h=[33mcommit 12df53af3ec600210a778ea5057c406b1cd6c022[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: prashantanuragi <prashant.anuragi@tigeranalytics.com>[m
+Date:   Fri May 26 23:49:11 2023 +0530[m
+[m
+    initial project version1[m
+[m
+[1mdiff --git a/README b/README[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..065bcad[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/README[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32mmy project[m[m
+[m
+[33mcommit 882487b630938dafbb710cfce5f7d8cd9b68fd5b[m[m
+Author: prashantanuragi <prashant.anuragi@tigeranalytics.com>[m
+Date:   Fri May 26 23:45:09 2023 +0530[m
+[m
+    initial project version[m
+[m
+[1mdiff --git a/test.py b/test.py[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..e69de29[m[m
+[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remi[Kote -v
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git push
+[?2004lfatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remote add tamplep[K[K[K[Klep_gitproject https://github.com/prashantanuragi/tamlep_gitproject.git
+[?2004l[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remote add tamlep_gitproject https://github.com/prashantanuragi/tamlep_gitproject.git[Apush[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cremote -vlog -p -2[1P2[Kcommit -m 'initial project version1'[A]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ [C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-m 'initial project version1'[A]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ [C[C[C[Clog[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -p 2-2remote -v[5Ppushremote add tamlep_gitproject https://github.com/prashantanuragi/tamlep_gitproject.git[Apush[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lfatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git push tamlep_gitproject 
+[?2004lUsername for 'https://github.com': prashantanuragi
+Password for 'https://prashantanuragi@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/prashantanuragi/tamlep_gitproject.git/'
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git push tamlep_gitproject 
+[?2004lUsername for 'https://github.com': prashantanuragi
+Password for 'https://prashantanuragi@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/prashantanuragi/tamlep_gitproject.git/'
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git push tamlep_gitproject [1@-[1@u[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmaste r
+[?2004lUsername for 'https://github.com': prashantanuragi
+Password for 'https://prashantanuragi@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/prashantanuragi/tamlep_gitproject.git/'
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remote show tamlep_gitproject 
+[?2004l* remote tamlep_gitproject
+  Fetch URL: https://github.com/prashantanuragi/tamlep_gitproject.git
+  Push  URL: https://github.com/prashantanuragi/tamlep_gitproject.git
+  HEAD branch: (unknown)
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remote show tamlep_gitproject push -u tamlep_gitproject master
+[?2004lUsername for 'https://github.com': prashantanuragi
+Password for 'https://prashantanuragi@github.com': 
+remote: Permission to prashantanuragi/tamlep_gitproject.git denied to prashantanuragi.
+fatal: unable to access 'https://github.com/prashantanuragi/tamlep_gitproject.git/': The requested URL returned error: 403
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git push -u tamlep_gitproject master
+[?2004lUsername for 'https://github.com': prashantanuragi
+Password for 'https://prashantanuragi@github.com': 
+remote: Write access to repository not granted.
+fatal: unable to access 'https://github.com/prashantanuragi/tamlep_gitproject.git/': The requested URL returned error: 403
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git push -u tamlep_gitproject master
+[?2004lUsername for 'https://github.com': prashn      prashantanuragi
+Password for 'https://prashantanuragi@github.com': 
+Enumerating objects: 6, done.
+Counting objects:  16% (1/6)Counting objects:  33% (2/6)Counting objects:  50% (3/6)Counting objects:  66% (4/6)Counting objects:  83% (5/6)Counting objects: 100% (6/6)Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  16% (1/6)Writing objects:  33% (2/6)Writing objects:  50% (3/6)Writing objects:  66% (4/6)Writing objects:  83% (5/6)Writing objects: 100% (6/6)Writing objects: 100% (6/6), 435 bytes | 435.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), done.[K
+To https://github.com/prashantanuragi/tamlep_gitproject.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'tamlep_gitproject'.
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remote show
+[?2004ltamlep_gitproject
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remote show origin
+[?2004lfatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git remote show origin[K[K[K[K[K[Ktampl[K[Klep_gitproject 
+[?2004lUsername for 'https://github.com': prashantanuragi
+Password for 'https://prashantanuragi@github.com': 
+* remote tamlep_gitproject
+  Fetch URL: https://github.com/prashantanuragi/tamlep_gitproject.git
+  Push  URL: https://github.com/prashantanuragi/tamlep_gitproject.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git tag
+[?2004l[?1h=[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git branch 
+[?2004l[?1h=* [32mmaster[m[m
+[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git branch -v
+[?2004l[?1h=* [32mmaster[m 12df53a initial project version1[m
+[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git branch -v[Kmerged
+[?2004lerror: did you mean `--merged` (with two dashes)?
+[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ git branch -merged-merged
+[?2004l[?1h=* [32mmaster[m[m
+[K[?1l>[?2004h]0;prashantanuragi@TIGER01106: ~/tamlep_gitproject[01;32mprashantanuragi@TIGER01106[00m:[01;34m~/tamlep_gitproject[00m$ exit
+[?2004lexit
+
+Script done on 2023-05-27 00:34:49+05:30 [COMMAND_EXIT_CODE="0"]

@@ -1,8 +1,5 @@
-# contents of pyproject.toml
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[tool.black]
+line-length = 100
 
-[project]
-name = "my_package"
-version = "0.1.0"
+[tool.isort]
+profile = "black"
